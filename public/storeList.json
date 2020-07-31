@@ -1,0 +1,16 @@
+{
+    "store": [
+        {
+            "id": 1,
+            "name": "미소초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "4"
+        },
+        {
+            "id": 2,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
+        }
+    ]
+}
