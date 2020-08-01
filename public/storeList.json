@@ -11,6 +11,36 @@
             "name": "우정초밥",
             "imgsrc": "./store/1.jpg",
             "star": "5"
+        },
+        {
+            "id": 3,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
+        },
+        {
+            "id": 4,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
+        },
+        {
+            "id": 5,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
+        },
+        {
+            "id": 6,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
+        },
+        {
+            "id": 7,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5"
         }
     ]
 }

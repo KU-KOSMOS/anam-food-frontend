@@ -18,7 +18,6 @@ body {
     // background-color: #1b1f25;
     font-family: $font-family;
     // color: $text-color;
-    transition: color 20s ease;
     background-color: #fefcff;
 }
 
@@ -29,7 +28,6 @@ body {
     width: 100%;
     height: 100%;
     font-size: 16px;
-    
 }
 
 body,
@@ -58,22 +56,44 @@ input {
         font-size: 16px;
     }
 
-    .MainLayout {
-        margin-top: 9rem;
-        margin-left: 9rem;
+    body {
+        .MainLayout {
+            margin-top: 9rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .star {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    .MainLayout {
-        padding: 1.125rem;
-    }
+    body {
+        .MainLayout {
+            padding: 1.125rem;
+            padding-top: 3rem;
+        }
 
-    .MainHeader {
-        font-size: 2rem;
+        .MainHeader {
+            font-size: 3rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .star {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+
+        .Card {
+            max-width: inherit;
+        }
     }
 }

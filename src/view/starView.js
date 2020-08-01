@@ -6,17 +6,32 @@ const StarView = ({ star }) => {
     const empty = 5 - star;
     const stars = [];
     for (let i = 0; i < empty; i++) {
-        stars.push(<img alt="empty_star" src="./static/star.png" />);
+        stars.push(
+            <img
+                key={i}
+                className="star"
+                alt="empty_star"
+                src="./static/star.png"
+            />
+        );
     }
     for (let i = 0; i < star; i++) {
-        stars.push(<img alt="filled_star" src="./static/star-fill.png" />);
+        stars.push(
+            <img
+                className="star"
+                key={empty + i}
+                alt="filled_star"
+                src="./static/star-fill.png"
+            />
+        );
     }
 
     return <StarBox>{stars.map((tag, idx) => tag)}</StarBox>;
 };
 
 const StarBox = styled(RowBox)`
-    padding-top: 0.5rem;
+    flex: 1;
+    align-items: flex-end;
 `;
 
-export default StarView
+export default StarView;

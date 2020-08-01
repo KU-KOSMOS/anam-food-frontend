@@ -17,6 +17,7 @@ const SvgStyle = styled.div`
         position: fixed;
         top: 0;
         width: 100%;
+        overflow-y: hidden;
         z-index: -1;
     }
 `;

@@ -1,7 +1,6 @@
 import React from "react";
 import Background from "./view/background";
 import MainComponent from "./component/mainComponent";
-
 import styled from "styled-components";
 
 import "./style/App.scss";
@@ -18,11 +17,13 @@ function App() {
 }
 
 const Layout = styled.div`
-    position: relative;
+    left: 50%;
+
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 1440px;
+    width: 90%;
+    max-width: 1080px;
 `;
 
 export default App;

@@ -7,26 +7,30 @@ const StoreCard = ({ props }) => {
     const { id, name, imgsrc, star } = props;
 
     return (
-        <CardRowBox>
-            <img className="shopPhoto" alt={name} src={imgsrc} />
-            <CardColBox>
-                <Name>{name}</Name>
-                <img alt="verified" src="./static/circle.png" />
-                <StarView star={star} />
-            </CardColBox>
-        </CardRowBox>
+            <CardRowBox className="Card">
+                <img className="shopPhoto" alt={name} src={imgsrc} />
+                <CardColBox>
+                    <Name>{name}</Name>
+                    <img
+                        alt="verified"
+                        className="circle"
+                        src="./static/circle.png"
+                    />
+                    <StarView star={star} />
+                </CardColBox>
+            </CardRowBox>
     );
 };
 
 const Name = styled.div`
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-bottom: 0.3rem;
 `;
 
 const CardColBox = styled(ColBox)`
-    img {
-        width: 32px;
-        height: 32px;
+    .circle {
+        width: 2rem;
+        height: 2rem;
     }
 
     align-items: flex-end;
@@ -34,18 +38,19 @@ const CardColBox = styled(ColBox)`
 
 const CardRowBox = styled(RowBox)`
     .shopPhoto {
-        width: 124px;
-        height: 96.75px;
+        width: 10rem;
+        height: 8rem;
 
         align-self: center;
         border-radius: 15px;
     }
-    margin-top: 1.5rem;
-    padding: 20px;
+
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
 
     justify-content: space-between;
 
-    max-width: 22rem;
+    max-width: 23rem;
     background: white;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
