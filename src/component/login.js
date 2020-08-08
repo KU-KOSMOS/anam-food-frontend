@@ -5,8 +5,7 @@ import { RowBox } from "../style/flexbox";
 const Login = () => {
     return (
         <ProfileRowBox>
-            <LoginTitle>로그인</LoginTitle>
-            <ProfilePicture alt="profile" src="./static/logo.png" />
+            <ProfilePicture alt="profile" src="/static/logo.png" />
         </ProfileRowBox>
     );
 };
@@ -14,7 +13,7 @@ const Login = () => {
 const LoginTitle = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
-    padding-right: 1rem;
+    padding-left: 1rem;
 `;
 
 const ProfilePicture = styled.img`

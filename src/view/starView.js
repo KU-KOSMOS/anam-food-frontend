@@ -11,7 +11,7 @@ const StarView = ({ star }) => {
                 key={i}
                 className="star"
                 alt="empty_star"
-                src="./static/star.png"
+                src="/static/star.png"
             />
         );
     }
@@ -21,7 +21,7 @@ const StarView = ({ star }) => {
                 className="star"
                 key={empty + i}
                 alt="filled_star"
-                src="./static/star-fill.png"
+                src="/static/star-fill.png"
             />
         );
     }
@@ -30,7 +30,6 @@ const StarView = ({ star }) => {
 };
 
 const StarBox = styled(RowBox)`
-    flex: 1;
     align-items: flex-end;
 `;
 

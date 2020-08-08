@@ -1,15 +1,33 @@
 import React from "react";
-import MainComponent from "./component/mainComponent";
 import styled from "styled-components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./style/App.scss";
+import Login from "./component/login";
+import Intro from "./component/intro";
+import Footer from "./component/footer";
+import NavSearch from "./component/navSearch";
+import StorePage from "./view/storePage";
+import { RowBox } from "./style/flexbox";
 
 function App() {
     return (
         <>
             <Background>
-                <Layout className="Layout">
-                    <MainComponent />
+                <Layout className="Layout MainLayout">
+                    <Mainh3>안암 뭐먹지? 프로젝트</Mainh3>
+                    <RowBox style={{ float: "right"}}>
+                        <Login />
+                        <NavSearch />
+                    </RowBox>
+                    <Router>
+                        <Switch>
+                            <Route exact path="/" component={Intro} />
+                            <Route path="/store/:id" component={StorePage} />
+                            <Route component={Intro} />
+                        </Switch>
+                    </Router>
+                    <Footer />
                 </Layout>
             </Background>
         </>
@@ -21,8 +39,8 @@ const Background = styled.div`
     width: 100%;
     top: 0px;
 
-    background-image: url("./static/Vectorvec.png"),
-        url("./static/Vectorvec-1.png");
+    background-image: url("/static/Vectorvec.png"),
+        url("/static/Vectorvec-1.png");
 
     background-repeat: no-repeat;
     background-position-x: center;
@@ -37,6 +55,14 @@ const Layout = styled.div`
 
     width: 90%;
     max-width: 1080px;
+`;
+
+const Mainh3 = styled.h3`
+    padding-top: 2rem;
+    display: inline;
+    z-index: 2;
+
+    font-size: 1.5rem;
 `;
 
 export default App;

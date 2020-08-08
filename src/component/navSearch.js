@@ -12,7 +12,7 @@ const NavSearch = () => {
 
     return (
         <SearchColBox>
-            <SearchImg onClick={stateReverse} src="./static/search-24.png" />
+            <SearchImg onClick={stateReverse} src="/static/search-24.png" />
 
             <div style={{ position: "relative" }}>
                 <SearchListColBox state={searchState}>
@@ -33,7 +33,8 @@ const SearchImg = styled.img`
 
 const SearchColBox = styled(ColBox)`
     top: 2rem;
-    padding-top: 0.4rem;
+
+    padding-left: 1rem;
 
     display: inline-flex;
     float: right;
@@ -45,6 +46,7 @@ const SearchListColBox = styled(ColBox)`
     background: rgba(255, 255, 255, 0.8);
     border-radius: 1rem;
     padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
     position: absolute;
     width: max-content;
@@ -70,9 +72,9 @@ const SearchListColBox = styled(ColBox)`
 `;
 
 const SearchChoice = styled.div`
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
 
     z-index: 2;
 `;

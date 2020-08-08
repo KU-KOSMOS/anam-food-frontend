@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import StoreCard from "../component/storeCard";
 import { ColBox } from "../style/flexbox";
+import { Link } from "react-router-dom";
 
 const StoreCardList = () => {
     const [state, setState] = useState(false);
@@ -31,7 +32,11 @@ const StoreCardList = () => {
         <StoreContainer ref={scrollRef}>
             {state
                 ? data.store.map((shop, idx) => {
-                      return <StoreCard key={idx} props={shop} />;
+                      return (
+                          <Link to={`/store/${shop.id}`} state={shop}>
+                              <StoreCard key={idx} props={shop} />
+                          </Link>
+                      );
                   })
                 : "loading"}
         </StoreContainer>

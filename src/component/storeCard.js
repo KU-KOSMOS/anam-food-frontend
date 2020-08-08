@@ -7,18 +7,20 @@ const StoreCard = ({ props }) => {
     const { id, name, imgsrc, star } = props;
 
     return (
-            <CardRowBox className="Card">
-                <img className="shopPhoto" alt={name} src={imgsrc} />
-                <CardColBox>
-                    <Name>{name}</Name>
+        <CardRowBox className="Card">
+            <img className="shopPhoto" alt={name} src={imgsrc} />
+            <CardColBox>
+                <Name>{name}</Name>
+                <div style={{textAlign: "right"}}>
                     <img
                         alt="verified"
                         className="circle"
-                        src="./static/circle.png"
+                        src="/static/circle.png"
                     />
                     <StarView star={star} />
-                </CardColBox>
-            </CardRowBox>
+                </div>
+            </CardColBox>
+        </CardRowBox>
     );
 };
 
@@ -33,6 +35,7 @@ const CardColBox = styled(ColBox)`
         height: 2rem;
     }
 
+    justify-content: space-between;
     align-items: flex-end;
 `;
 
