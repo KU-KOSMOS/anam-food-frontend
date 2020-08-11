@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RowBox, ColBox } from "../style/flexbox";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const NavSearch = () => {
     const [searchState, setSearchState] = useState(false);
@@ -14,14 +15,22 @@ const NavSearch = () => {
         <SearchColBox>
             <SearchImg onClick={stateReverse} src="/static/search-24.png" />
 
-            <div style={{ position: "relative" }}>
+            <section style={{ position: "relative" }}>
                 <SearchListColBox state={searchState}>
-                    <SearchChoice>음식점 상세검색</SearchChoice>
-                    <SearchChoice>분류별로 검색</SearchChoice>
-                    <SearchChoice>위치별로 검색</SearchChoice>
-                    <SearchChoice>룰렛 돌리기</SearchChoice>
+                    <Link to="/search">
+                        <SearchChoice>음식점 상세검색</SearchChoice>
+                    </Link>
+                    <Link to="/categorySearch/">
+                        <SearchChoice>분류별로 검색</SearchChoice>
+                    </Link>
+                    <Link to="/locationSearch/">
+                        <SearchChoice>위치별로 검색</SearchChoice>
+                    </Link>
+                    <Link to="/roulette">
+                        <SearchChoice>룰렛 돌리기</SearchChoice>
+                    </Link>
                 </SearchListColBox>
-            </div>
+            </section>
         </SearchColBox>
     );
 };
@@ -71,7 +80,7 @@ const SearchListColBox = styled(ColBox)`
     }
 `;
 
-const SearchChoice = styled.div`
+const SearchChoice = styled.nav`
     padding-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: 500;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { RowBox, ColBox } from "../style/flexbox";
 import StarView from "./starView";
+import Comment from "../component/comment";
 
 const StorePage = ({ match }) => {
     // const storeNumber = match.params.id;
@@ -24,21 +25,52 @@ const StorePage = ({ match }) => {
             <Layout>
                 <StoreRowBox>
                     <StoreImg alt={data.store.name} src={data.store.imgsrc} />
-                    <ColBox style={{ alignSelf: "flex-start", flex: "1" }}>
-                        <RowBox
-                            style={{
-                                justifyContent: "space-between",
-                                alignItems: "baseline",
-                            }}
-                        >
-                            <MainHeader>{data.store.name}</MainHeader>
-
-                            <StarView star={data.store.star} />
-                        </RowBox>
-                        <Excerpt>{data.store.excerpt}</Excerpt>
-                        <Location>{data.store.address}</Location>
-                    </ColBox>
+                    <RowBox
+                        style={{ justifyContent: "space-between", flex: "1" }}
+                    >
+                        <ColBox style={{ alignSelf: "flex-start", flex: "1" }}>
+                            <RowBox style={{ alignItems: "baseline" }}>
+                                <MainHeader>{data.store.name}</MainHeader>
+                                &nbsp;
+                                <h3 style={{ color: "green" }}>영업 중</h3>
+                            </RowBox>
+                            <Excerpt>{data.store.excerpt}</Excerpt>
+                            <Location>{data.store.address}</Location>
+                            <Location>{data.store.telephone}</Location>
+                        </ColBox>
+                        <ColBox>
+                            <StarView
+                                style={{ alignSelf: "flex-start" }}
+                                star={data.store.star}
+                            />
+                            <StoreScore>전체 평점 {data.store.star}/5</StoreScore>
+                        </ColBox>
+                    </RowBox>
                 </StoreRowBox>
+                <h2>최근 리뷰</h2>
+                <CommentBox>
+                    <Comment
+                        title="댓글 1"
+                        date="2020/02/02"
+                        name="최용욱"
+                        excerpt={["hi", "hi2", "hi3"]}
+                        score={4}
+                    />
+                    <Comment
+                        title="댓글 1"
+                        date="2020/02/02"
+                        name="최용욱"
+                        excerpt={["hi", "hi2", "hi3"]}
+                        score={4}
+                    />
+                    <Comment
+                        title="댓글 1"
+                        date="2020/02/02"
+                        name="최용욱"
+                        excerpt={["hi", "hi2", "hi3"]}
+                        score={4}
+                    />
+                </CommentBox>
             </Layout>
         );
     } else {
@@ -46,19 +78,38 @@ const StorePage = ({ match }) => {
     }
 };
 
-const Layout = styled.div`
-    padding-top: 2rem;
+const StoreScore = styled.label`
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
 `;
 
-const StoreRowBox = styled(RowBox)`
-    padding: 1.5rem;
-    align-items: center;
-    flex-wrap: wrap;
+const CommentDate = styled.nav`
+    color: #6b6b6b;
+`;
 
-    background: white;
+const CommentTitle = styled.h1`
+    font-size: 1.3rem;
+`;
+
+const CommentBox = styled(RowBox)`
+    flex-wrap: wrap;
+    justify-content: space-between;
+`;
+
+const Layout = styled.div`
+    margin-top: 2rem;
+    background: #ffffffbb;
+    padding: 1.5rem;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
+`;
+
+const StoreRowBox = styled(RowBox)`
+    margin-bottom: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
 const StoreImg = styled.img`

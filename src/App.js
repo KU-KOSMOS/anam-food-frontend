@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import "./style/App.scss";
-import Login from "./component/login";
+import Login from "./component/loginButton";
 import Intro from "./component/intro";
 import Footer from "./component/footer";
 import NavSearch from "./component/navSearch";
 import StorePage from "./view/storePage";
+import LoginPage from "./view/loginPage";
+import SearchPage from "./view/searchPage";
 import { RowBox } from "./style/flexbox";
 
 function App() {
@@ -15,15 +17,22 @@ function App() {
         <>
             <Background>
                 <Layout className="Layout MainLayout">
-                    <Mainh3>안암 뭐먹지? 프로젝트</Mainh3>
-                    <RowBox style={{ float: "right"}}>
-                        <Login />
-                        <NavSearch />
-                    </RowBox>
                     <Router>
+                        <Link to="/">
+                            <Mainh3>안암 뭐먹지? 프로젝트</Mainh3>
+                        </Link>
+                        <RowBox style={{ float: "right" }}>
+                            <Login />
+                            <NavSearch />
+                        </RowBox>
                         <Switch>
                             <Route exact path="/" component={Intro} />
                             <Route path="/store/:id" component={StorePage} />
+                            <Route path="/login" component={LoginPage} />
+                            <Route path="/search" component={SearchPage} />
+                            <Route path="/categorySearch" />
+                            <Route path="/locationSearch" />
+                            <Route path="/roulette" />
                             <Route component={Intro} />
                         </Switch>
                     </Router>

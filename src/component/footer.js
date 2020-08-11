@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Footer = () => {
     return (
-        <FooterStyled>고려대학교 컴퓨터학과 KOSMOS 안암 뭐먹지 팀</FooterStyled>
+        <FooterStyled>고려대학교 컴퓨터학과 KOSMOS 안암 뭐먹지? 팀</FooterStyled>
     );
 };
 

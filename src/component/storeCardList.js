@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
-import StoreCard from "../component/storeCard";
+import StoreCard from "./storeCard";
 import { ColBox } from "../style/flexbox";
 import { Link } from "react-router-dom";
 
 const StoreCardList = () => {
     const [state, setState] = useState(false);
-    const [data, setData] = useState("");
+    const [data, setData] = useState(null);
 
     const scrollRef = useRef();
 
@@ -33,9 +33,10 @@ const StoreCardList = () => {
             {state
                 ? data.store.map((shop, idx) => {
                       return (
-                          <Link to={`/store/${shop.id}`} state={shop}>
+                          <React.Fragment key={idx}>
                               <StoreCard key={idx} props={shop} />
-                          </Link>
+                              <Margin />
+                          </React.Fragment>
                       );
                   })
                 : "loading"}
@@ -43,13 +44,14 @@ const StoreCardList = () => {
     );
 };
 
+const Margin = styled.div`
+    margin-bottom: 1.5rem;
+`;
+
 const StoreContainer = styled(ColBox)`
-    padding: 0 10px 0 10px;
     padding-top: 2rem;
 
-    margin-right: 0;
-
-    height: 100%;
+    margin-right: auto;
 `;
 
 export default StoreCardList;

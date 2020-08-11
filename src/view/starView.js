@@ -2,12 +2,13 @@ import React from "react";
 import { RowBox, ColBox } from "../style/flexbox";
 import styled from "styled-components";
 
-const StarView = ({ star }) => {
+const StarView = ({ star, size = "2rem" }) => {
     const empty = 5 - star;
     const stars = [];
     for (let i = 0; i < empty; i++) {
         stars.push(
-            <img
+            <Star
+                width={size}
                 key={i}
                 className="star"
                 alt="empty_star"
@@ -17,7 +18,8 @@ const StarView = ({ star }) => {
     }
     for (let i = 0; i < star; i++) {
         stars.push(
-            <img
+            <Star
+                width={size}
                 className="star"
                 key={empty + i}
                 alt="filled_star"
@@ -29,8 +31,11 @@ const StarView = ({ star }) => {
     return <StarBox>{stars.map((tag, idx) => tag)}</StarBox>;
 };
 
-const StarBox = styled(RowBox)`
-    align-items: flex-end;
+const StarBox = styled(RowBox)``;
+
+const Star = styled.img`
+    width: ${(props) => props.width};
+    height: ${(props) => props.width};
 `;
 
 export default StarView;

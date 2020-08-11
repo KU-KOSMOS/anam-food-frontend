@@ -56,6 +56,40 @@ a {
     text-decoration: none;
 }
 
+hr {
+    margin: 0;
+    text-decoration: none;
+    border: 1px solid #929191;
+}
+
+.CardLink {
+    margin-right: auto;
+}
+
+.starContainer {
+    margin-left: 4rem;
+}
+
+input,
+input:focus {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.searchBox {
+    input {
+        display: none;
+    }
+
+    input:checked + label {
+        background-color: #b4d6ffbb;
+    }
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 @media screen and (min-width: 768px) {
     html {
         font-size: 16px;
@@ -67,11 +101,6 @@ a {
             padding-left: 1rem;
             padding-right: 1rem;
             padding-bottom: 2rem;
-        }
-
-        .star {
-            width: 2rem;
-            height: 2rem;
         }
     }
 }
@@ -92,11 +121,6 @@ a {
             font-size: 3rem;
             padding-top: 2rem;
             padding-bottom: 2rem;
-        }
-
-        .star {
-            width: 1.7rem;
-            height: 1.7rem;
         }
 
         .Card {

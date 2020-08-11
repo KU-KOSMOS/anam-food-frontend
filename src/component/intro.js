@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import StoreCardList from "../view/storeCardList";
+import StoreCardList from "./storeCardList";
 
 const Intro = () => {
     return (
