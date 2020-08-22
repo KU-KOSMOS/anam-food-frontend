@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
@@ -7,17 +7,28 @@ import Login from "./component/loginButton";
 import Intro from "./component/intro";
 import Footer from "./component/footer";
 import NavSearch from "./component/navSearch";
+import Navbar from "./component/Navbar";
 import StorePage from "./view/storePage";
 import LoginPage from "./view/loginPage";
 import SearchPage from "./view/searchPage";
 import { RowBox } from "./style/flexbox";
 
 function App() {
+    const[sidebar, setSidebar] = useState(false);
+
+    const showSidebar = ()=>setSidebar(!sidebar)
+    const onOtherClick= ()=>{
+      if(sidebar){
+        setSidebar(!sidebar);
+      }
+    }
+  
     return (
-        <>
-            <Background>
+        <><Router>
+            <Background onClick= {onOtherClick}>
+                <Navbar sidebar= {sidebar} showSidebar={showSidebar}></Navbar>
                 <Layout className="Layout MainLayout">
-                    <Router>
+                    
                         <Link to="/">
                             <Mainh3>안암 뭐먹지? 프로젝트</Mainh3>
                         </Link>
@@ -35,10 +46,11 @@ function App() {
                             <Route path="/roulette" />
                             <Route component={Intro} />
                         </Switch>
-                    </Router>
+                    
                     <Footer />
                 </Layout>
             </Background>
+            </Router>
         </>
     );
 }

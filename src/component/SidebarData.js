@@ -1,26 +1,26 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from  'react-icons/io';
+
 
 export const SidebarData= [
     {
-        title: 'Home',
+        title: '홈',
         path:'/',
         icon: <AiIcons.AiFillHome/>,
         cName:'nav-text'
     },
 
     {
-        title: 'Reports',
-        path:'/reports',
-        icon: <IoIcons.IoIosPaper/>,
+        title: '로그인',
+        path:'/login',
+        icon: <FaIcons.FaHamburger/>,
         cName:'nav-text'
     },
     {
-        title: 'Products',
-        path:'/products',
-        icon: <FaIcons.FaCartPlus/>,
+        title: '찾아보기',
+        path:'/search',
+        icon: <AiIcons.AiOutlineSearch/>,
         cName:'nav-text'
     },
 ]
