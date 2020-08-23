@@ -46,7 +46,6 @@ function App() {
                             <Route path="/roulette" />
                             <Route component={Intro} />
                         </Switch>
-                    
                     <Footer />
                 </Layout>
             </Background>
