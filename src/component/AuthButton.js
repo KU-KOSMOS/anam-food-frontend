@@ -12,7 +12,7 @@ const AuthButton = () => {
 
 const Button = styled.button`
     width:100%;
-    background: ${oc.indigo[2]};  
+    background: ${oc.blue[3]};  
     height: 2rem;
     cursor: pointer;
     justify-contents: center;
