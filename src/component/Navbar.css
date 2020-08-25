@@ -6,7 +6,11 @@
 }
 
 .nav-menu{
+<<<<<<< HEAD
     background-color: #91a7ff;
+=======
+    background-color: #2ECCFA;
+>>>>>>> kanary
     width: 250px;
     height: 100vh;
     display:flex;
@@ -45,7 +49,11 @@
 }
 
 .nav-text a:hover{
+<<<<<<< HEAD
     background-color: #bac8ff;
+=======
+    background-color: #2ECCFA;
+>>>>>>> kanary
 }
 
 .nav-menu-items{

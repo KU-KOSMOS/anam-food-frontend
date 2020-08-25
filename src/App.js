@@ -46,6 +46,10 @@ function App() {
                             <Route path="/roulette" />
                             <Route component={Intro} />
                         </Switch>
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> kanary
                     <Footer />
                 </Layout>
             </Background>
