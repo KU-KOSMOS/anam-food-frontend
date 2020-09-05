@@ -1,5 +1,7 @@
 # Anam Food Frontend
 
+[![Build Status](https://travis-ci.com/KU-KOSMOS/anam-food-frontend.svg?branch=master)](https://travis-ci.com/KU-KOSMOS/anam-food-frontend)
+
 ## Anam Food Team (Contributor)
 [최용욱](http://github.com/hyp3rflow) - Project manager, Frontend developer  
 [장창서](http://github.com/beleap) - Backend developer  
