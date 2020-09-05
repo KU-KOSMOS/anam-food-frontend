@@ -1,7 +1,6 @@
 # Anam Food Frontend
+[![Build Status](https://travis-ci.com/KU-KOSMOS/anam-food-frontend.svg?branch=master)](https://travis-ci.com/KU-KOSMOS/anam-food-frontend)  
 Anam Food is Food Review and Recommendation application like [mangoplate](https://www.mangoplate.com/), [sofo](https://www.koreapas.com/m/sofo_result.php). Unlike these examples, Anam Food connects users in Korea University and track their food data, recommend new restaurants or friends' (or student in same college) recommendation list.
-
-[![Build Status](https://travis-ci.com/KU-KOSMOS/anam-food-frontend.svg?branch=master)](https://travis-ci.com/KU-KOSMOS/anam-food-frontend)
 
 ## Anam Food Team (Contributor)
 [최용욱](http://github.com/hyp3rflow) - Project manager, Frontend developer  
