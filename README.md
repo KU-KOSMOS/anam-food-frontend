@@ -1,15 +1,15 @@
 # Anam Food Frontend
 
 ## Anam Food Team (Contributor)
-[최용욱](http://github.com/hyp3rflow) - Project manager, Frontend developer
-[장창서](http://github.com/beleap) - Backend developer
-유승은
-김류빈
-노정훈
-우귀정
-이현진
-홍승재
-
+[최용욱](http://github.com/hyp3rflow) - Project manager, Frontend developer  
+[장창서](http://github.com/beleap) - Backend developer  
+유승은  
+김류빈  
+노정훈  
+우귀정  
+이현진  
+홍승재  
+  
 
 ## License
 
