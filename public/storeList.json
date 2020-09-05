@@ -1,0 +1,53 @@
+{
+    "store": [
+        {
+            "id": 1,
+            "name": "미소초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "4",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 2,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 3,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 4,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 5,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 6,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        },
+        {
+            "id": 7,
+            "name": "우정초밥",
+            "imgsrc": "./store/1.jpg",
+            "star": "5",
+            "excerpt": "안암역 5번 출구에 있는 초밥집입니다."
+        }
+    ]
+}
